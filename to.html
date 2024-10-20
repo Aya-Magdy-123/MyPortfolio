@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aya</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="letter-a.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <nav
+          id="nav"
+          class="navbar mb-5 navbar-expand-lg  fixed-top"
+        >
+          <div class="container">
+            <a class="navbar-brand" href="#"
+              ><span class="logo">
+                < Aya Magdy <span class="slash">/</span>>
+              </span></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon  " style="background-color: orange;border-radius: 5px;"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                  <span class="logo">
+                    < Aya Magdy <span class="slash">/</span>>
+                  </span>
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close bg-info"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul
+                  class="navbar-nav justify-content-end flex-grow-1 pe-3 ulChildern"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <li class="nav-item mb-2">
+                    <a href="#top" class="active">Home</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#skills-part" class="">Skills</a>
+                  </li>
+                  <li class="nav-item mb-2">
+                    <a href="#projects-part" class="">Projects</a>
+                  </li>
+
+                  <li class="nav-item mb-2">
+                    <a href="#contact-us" class="">Contact Info</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="main-content mt-5">
+          <div class="d-flex align-items-center w-100 h-100">
+            <div class="row w-100">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <section class="introduction">
+                  <h1>
+                    Hi All
+                    <img src="waving-hand.png" class="img-fluid" alt="" /> I'm
+                    Aya
+                  </h1>
+                  <p>
+                    A passionate frontend developer. Having an experience in
+                    building websites with modern technologies
+                  </p>
+                  <div class="buttons">
+                    <a target="_blank" download href="./aya magdy.pdf"
+                      ><button>My Resume</button></a
+                    >
+                    <a href="about.html" target="_blank"
+                      ><button>About Me</button></a
+                    >
+                  </div>
+                </section>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <section
+                  class="introduction-image ratio ratio-1x1"
+                  width="300px"
+                  height="450px"
+                >
+                <iframe width="700" height="700" src="https://lottie.host/embed/f39231e0-3979-4be3-aec2-f18cf7598cfa/jSqGM2j0hQ.json" allowfullscreen></iframe>                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------- section-part-skills -->
+
+    <section class="skills-part" id="skills-part">
+      <div class="container">
+        <div
+          class="skills-con"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:  rgb(5,3,76);
+            "
+        >
+          <div class="row">
+            <div
+              class="header-text"
+              style="width: 100%; display: flex; justify-content: center"
+            >
+              <h1 id="header-text">Skills</h1>
+            </div>
+          </div>
+
+          <div class="skills-container">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="div-one">
+                  <div class="div-one-img">
+                    <img src="html-5.png" alt="" />
+                  </div>
+                  <div class="div-one-content">
+                    <h1>HTML</h1>
+                    <p>HTML5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="div-one">
+                  <div class="div-one-img">
+                    <img src="css.png" alt="" />
+                  </div>
+                  <div class="div-one-content">
+                    <h1>CSS</h1>
+                    <p>CSS3 and SCSS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="div-one">
+                  <div class="div-one-img">
+                    <img src="java-script.png" alt="" />
+                  </div>
+                  <div class="div-one-content">
+                    <h1>Java-Script</h1>
+                    <p>JavaScript and TypeScript</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="div-one">
+                  <div class="div-one-img">
+                    <img src="web-design.png" alt="" />
+                  </div>
+                  <div class="div-one-content">
+                    <h1>Web-Design</h1>
+                    <p>Make a beautiful UI with matchin colors</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="div-one">
+                  <div class="div-one-img">
+                    <img src="bootstrap.png" alt="" />
+                  </div>
+                  <div class="div-one-content">
+                    <h1>Bootstrap</h1>
+                    <p>BootStrap5</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="div-one">
+                  <div class="div-one-img">
+                    <img src="angularjs.png" alt="" />
+                  </div>
+                  <div class="div-one-content">
+                    <h1>Angular</h1>
+                    <p>Angular V.16</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------- projects part -->
+
+    <section class="projects-part" id="projects-part">
+      <div class="container">
+        <div
+          class="projects-con"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:  rgb(5,3,76);
+            "
+        >
+          <div class="row">
+            <div
+              class="header-text"
+              style="width: 100%; display: flex; justify-content: center"
+            >
+              <h1 id="header-text" style="margin-top: 20px">Projects</h1>
+            </div>
+          </div>
+          <div class="projects-div">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="projects-div-one">
+                  <h1>Recipe Sharing</h1>
+                  <div class="projects-div-one-img">
+                    <img src="food.png" />
+                  </div>
+                  <div class="projects-div-one-link">
+                    <a href=" https://final-project-ztrj.vercel.app/">
+                      https://final-project-ztrj.vercel.app/</a
+                    >
+                  </div>
+                  <div class="technologies">
+                    <img class="img-fluid" src="html-5.png" alt="" />
+                    <img class="img-fluid" src="css.png" alt="" />
+                    <img class="img-fluid" src="bootstrap.png" alt="" />
+                    <img class="img-fluid" src="typescript.png" alt="" />
+                    <img class="img-fluid" src="angularjs.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="projects-div-one">
+                  <h1>Leo Teapoz</h1>
+                  <div class="projects-div-one-img">
+                    <img src="leo teapoz.png" />
+                  </div>
+                  <div class="projects-div-one-link">
+                    <a href=" https://leo-teapoz-6fad69.netlify.app/">
+                      https://leo-teapoz-6fad69.netlify.app/</a
+                    >
+                  </div>
+                  <div class="technologies">
+                    <img class="img-fluid" src="html-5.png" alt="" />
+                    <img class="img-fluid" src="css.png" alt="" />
+                    <img class="img-fluid" src="bootstrap.png" alt="" />
+                    <img class="img-fluid" src="java-script.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="projects-div-one">
+                  <h1>Neura</h1>
+                  <div class="projects-div-one-img">
+                    <img src="neura.png" />
+                  </div>
+                  <div class="projects-div-one-link">
+                    <a href=" https://neura-website-d0d9ba.netlify.app/">
+                      https://neura-website-d0d9ba.netlify.app/</a
+                    >
+                  </div>
+                  <div class="technologies">
+                    <img class="img-fluid" src="html-5.png" alt="" />
+                    <img class="img-fluid" src="css.png" alt="" />
+                    <img class="img-fluid" src="bootstrap.png" alt="" />
+                    <img class="img-fluid" src="java-script.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="projects-div-one">
+                  <h1>Audio Phile</h1>
+                  <div class="projects-div-one-img">
+                    <img src="audioweb.png" />
+                  </div>
+                  <div class="projects-div-one-link">
+                    <a href=" https://aduiophile-website-d85b6c.netlify.app/">
+                      https://aduiophile-website-d85b6c.netlify.app/</a
+                    >
+                  </div>
+                  <div class="technologies">
+                    <img class="img-fluid" src="html-5.png" alt="" />
+                    <img class="img-fluid" src="css.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="projects-div-one">
+                  <h1>Paint App</h1>
+                  <div class="projects-div-one-img">
+                    <img src="Screenshot (461).png" alt="" />
+                  </div>
+                  <div class="projects-div-one-link">
+                    <a href=" https://musical-froyo-45eef8.netlify.app/">
+                      https://musical-froyo-45eef8.netlify.app/</a
+                    >
+                  </div>
+                  <div class="technologies">
+                    <img class="img-fluid" src="html-5.png" alt="" />
+                    <img class="img-fluid" src="css.png" alt="" />
+                    <img class="img-fluid" src="bootstrap.png" alt="" />
+                    <img class="img-fluid" src="java-script.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="projects-div-one">
+                  <h1>Calculatour</h1>
+                  <div class="projects-div-one-img">
+                    <img src="calculator.png" />
+                  </div>
+                  <div class="projects-div-one-link">
+                    <a href=" https://calculator-online-0a59de.netlify.app/">
+                      https://calculator-online-0a59de.netlify.app/</a
+                    >
+                  </div>
+                  <div class="technologies">
+                    <img class="img-fluid" src="html-5.png" alt="" />
+                    <img class="img-fluid" src="css.png" alt="" />
+                    <img class="img-fluid" src="java-script.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------- footer----- -->
+    <footer id="contact-us">
+      <div class="container">
+        <div class="foot-content">
+          <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <div class="content">
+                <h3>Interested To Work With <span>Me</span> ?</h3>
+                <p>you can contact me through :</p>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <div class="contact">
+                <div class="linkedin">
+                  <img src="linkedin_2504923.png" alt="" />
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/aya-magdy-6-abc/"
+                    >Aya Magdy</a
+                  >
+                </div>
+                <div class="gmail">
+                  <img src="gmail.png" alt="" />
+                  <a target="_blank" href="mailto:ayamag2025@gmail.com"
+                    >ayamag2025@gmail.com</a
+                  >
+                </div>
+                <div class="phone">
+                  <img src="phone-call_5585856.png" alt="" />
+                  <p>01005508969</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
