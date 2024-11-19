@@ -9,16 +9,28 @@
     <link rel="shortcut icon" href="letter-a.png" type="image/x-icon" />
   </head>
   <body>
+    <div class="open position-absolute" id="open">
+      <div
+        class="d-flex justify-content-center align-items-center h-100 w-100 flex-column"
+      >
+        <h1 id="h1" class="d-flex justify-content-center align-items-center">
+          Aya Magdy
+        </h1>
+        <button id="start" class="mt-5 fw-bold">Start</button>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+      </div>
+    </div>
+
     <div class="main">
       <div class="container">
-        <nav
-          id="nav"
-          class="navbar mb-5 navbar-expand-lg  fixed-top"
-        >
+        <nav id="nav" class="navbar navbar-expand-lg">
           <div class="container">
             <a class="navbar-brand" href="#"
               ><span class="logo">
-                < Aya Magdy <span class="slash">/</span>>
+                /<span class="slash">*</span> Aya Magdy
+                <span class="slash">*</span>/
               </span></a
             >
             <button
@@ -29,7 +41,10 @@
               aria-controls="offcanvasNavbar"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon  " style="background-color: orange;border-radius: 5px;"></span>
+              <span
+                class="navbar-toggler-icon"
+                style="background-color: orange; border-radius: 5px"
+              ></span>
             </button>
             <div
               class="offcanvas offcanvas-end"
@@ -40,7 +55,7 @@
               <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                   <span class="logo">
-                    < Aya Magdy <span class="slash">/</span>>
+                    /* Aya Magdy <span class="slash">*</span>/
                   </span>
                 </h5>
                 <button
@@ -59,37 +74,35 @@
                     <a href="#top" class="active">Home</a>
                   </li>
                   <li class="nav-item mb-2">
-                    <a href="#skills-part" class="">Skills</a>
+                    <a href="#skills" class="">Skills</a>
                   </li>
                   <li class="nav-item mb-2">
                     <a href="#projects-part" class="">Projects</a>
                   </li>
 
                   <li class="nav-item mb-2">
-                    <a href="#contact-us" class="">Contact Info</a>
+                    <a href="#contact-us" class="">Contact Me</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </nav>
-        <div class="main-content mt-5">
+        <div class="main-content">
           <div class="d-flex align-items-center w-100 h-100">
             <div class="row w-100">
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <section class="introduction">
-                  <h1>
-                    Hi All
-                    <img src="waving-hand.png" class="img-fluid" alt="" /> I'm
-                    Aya
-                  </h1>
+                  <h1 class="autoText"><span></span></h1>
                   <p>
                     A passionate frontend developer. Having an experience in
-                    building websites with modern technologies
+                    building websites with modern technologies...
                   </p>
                   <div class="buttons">
                     <a target="_blank" download href="./aya magdy.pdf"
-                      ><button>My Resume</button></a
+                      ><button style="background-color: #96510d">
+                        My Resume
+                      </button></a
                     >
                     <a href="about.html" target="_blank"
                       ><button>About Me</button></a
@@ -98,12 +111,11 @@
                 </section>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12">
-                <section
-                  class="introduction-image ratio ratio-1x1"
-                  width="300px"
-                  height="450px"
-                >
-                <iframe width="700" height="700" src="https://lottie.host/embed/f39231e0-3979-4be3-aec2-f18cf7598cfa/jSqGM2j0hQ.json" allowfullscreen></iframe>                </section>
+                <div class="mix">
+                  <div class="img-container">
+                    <img src="girl.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -113,97 +125,102 @@
 
     <!-- --------------------- section-part-skills -->
 
-    <section class="skills-part" id="skills-part">
-      <div class="container">
-        <div
-          class="skills-con"
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color:  rgb(5,3,76);
-            "
+    <section class="skills" id="skills">
+      <div class="skills-container">
+        <h1
+          class="banner mt-4 mb-3 d-flex justify-content-center"
+          style="color: #96510d"
         >
-          <div class="row">
-            <div
-              class="header-text"
-              style="width: 100%; display: flex; justify-content: center"
-            >
-              <h1 id="header-text">Skills</h1>
-            </div>
-          </div>
+          Skills
+        </h1>
 
-          <div class="skills-container">
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="div-one">
-                  <div class="div-one-img">
-                    <img src="html-5.png" alt="" />
-                  </div>
-                  <div class="div-one-content">
-                    <h1>HTML</h1>
-                    <p>HTML5</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="div-one">
-                  <div class="div-one-img">
-                    <img src="css.png" alt="" />
-                  </div>
-                  <div class="div-one-content">
-                    <h1>CSS</h1>
-                    <p>CSS3 and SCSS</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="div-one">
-                  <div class="div-one-img">
-                    <img src="java-script.png" alt="" />
-                  </div>
-                  <div class="div-one-content">
-                    <h1>Java-Script</h1>
-                    <p>JavaScript and TypeScript</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="div-one">
-                  <div class="div-one-img">
-                    <img src="web-design.png" alt="" />
-                  </div>
-                  <div class="div-one-content">
-                    <h1>Web-Design</h1>
-                    <p>Make a beautiful UI with matchin colors</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="div-one">
-                  <div class="div-one-img">
-                    <img src="bootstrap.png" alt="" />
-                  </div>
-                  <div class="div-one-content">
-                    <h1>Bootstrap</h1>
-                    <p>BootStrap5</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="div-one">
-                  <div class="div-one-img">
-                    <img src="angularjs.png" alt="" />
-                  </div>
-                  <div class="div-one-content">
-                    <h1>Angular</h1>
-                    <p>Angular V.16</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="div-container w-100 p-3">
+          <div class="div-one d-flex flex-column p-3 align-items-center">
+            <img
+              src="html-5.png"
+              alt=""
+              width="30%"
+              height="30%"
+              class="mb-3 mt-3"
+            />
+            <h2>HTML5</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              eveniet.
+            </p>
+          </div>
+          <div class=" div-two mt-5 d-flex flex-column p-3 align-items-center">
+            <img
+              src="css.png"
+              alt=""
+              width="30%"
+              height="30%"
+              class="mb-3 mt-3"
+            />
+            <h2>CSS3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              eveniet.
+            </p>
+          </div>
+          <div class="div-one d-flex flex-column p-3 align-items-center">
+            <img
+              src="java-script.png"
+              alt=""
+              width="30%"
+              height="30%"
+              class="mb-3 mt-3"
+            />
+            <h2>java-script</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              eveniet.
+            </p>
+          </div>
+          <div class=" div-two mt-5 d-flex flex-column p-3 align-items-center">
+            <img
+              src="bootstrap.png"
+              alt=""
+              width="30%"
+              height="30%"
+              class="mb-3 mt-3"
+            />
+            <h2>Bootstrap</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              eveniet.
+            </p>
+          </div>
+          <div class="div-one d-flex flex-column p-3 align-items-center">
+            <img
+              src="typescript.png"
+              alt=""
+              width="30%"
+              height="30%"
+              class="mb-3 mt-3"
+            />
+            <h2>Typescript</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              eveniet.
+            </p>
+          </div>
+          <div class="div-two mt-5 d-flex flex-column p-3 align-items-center">
+            <img
+              src="angularjs.png"
+              alt=""
+              width="30%"
+              height="30%"
+              class="mb-3 mt-3"
+            />
+            <h2>Angular</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+              eveniet.
+            </p>
           </div>
         </div>
+        <div class="line mb-3">.</div>
       </div>
     </section>
 
@@ -217,22 +234,27 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color:  rgb(5,3,76);
-            "
+            background-color: rgb(252, 247, 240);
+          "
         >
           <div class="row">
             <div
               class="header-text"
               style="width: 100%; display: flex; justify-content: center"
             >
-              <h1 id="header-text" style="margin-top: 20px">Projects</h1>
+              <h1
+                class="banner mt-4 mb-3 d-flex justify-content-center"
+                style="color: #96510d"
+              >
+                Projects
+              </h1>
             </div>
           </div>
           <div class="projects-div">
             <div class="row">
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="projects-div-one">
-                  <h1>Recipe Sharing</h1>
+                  <h1 style="color: red">Recipe Sharing</h1>
                   <div class="projects-div-one-img">
                     <img src="food.png" />
                   </div>
@@ -252,7 +274,7 @@
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="projects-div-one">
-                  <h1>Leo Teapoz</h1>
+                  <h1 style="color: green">Leo Teapoz</h1>
                   <div class="projects-div-one-img">
                     <img src="leo teapoz.png" />
                   </div>
@@ -271,7 +293,7 @@
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="projects-div-one">
-                  <h1>Neura</h1>
+                  <h1 style="color: rgb(141, 20, 20)">Neura</h1>
                   <div class="projects-div-one-img">
                     <img src="neura.png" />
                   </div>
@@ -290,9 +312,9 @@
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="projects-div-one">
-                  <h1>Audio Phile</h1>
+                  <h1 style="color: palevioletred">Flowers</h1>
                   <div class="projects-div-one-img">
-                    <img src="audioweb.png" />
+                    <img src="flowers.png" />
                   </div>
                   <div class="projects-div-one-link">
                     <a href=" https://aduiophile-website-d85b6c.netlify.app/">
@@ -307,9 +329,9 @@
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="projects-div-one">
-                  <h1>Paint App</h1>
+                  <h1 style="color: rgb(175, 93, 10)">Resort</h1>
                   <div class="projects-div-one-img">
-                    <img src="Screenshot (461).png" alt="" />
+                    <img src="resort.png" alt="" />
                   </div>
                   <div class="projects-div-one-link">
                     <a href=" https://musical-froyo-45eef8.netlify.app/">
@@ -326,9 +348,9 @@
               </div>
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="projects-div-one">
-                  <h1>Calculatour</h1>
+                  <h1 style="color: rgb(117, 9, 65)">Space World</h1>
                   <div class="projects-div-one-img">
-                    <img src="calculator.png" />
+                    <img src="planets.png" />
                   </div>
                   <div class="projects-div-one-link">
                     <a href=" https://calculator-online-0a59de.netlify.app/">
@@ -347,7 +369,12 @@
         </div>
       </div>
     </section>
-
+    <div class="d-flex justify-content-end w-100">
+      <a href="#top">
+        <button class="topBtn p-2 fixed-bottom z-3">
+          <i class="fa-solid fa-arrow-up"></i></button
+      ></a>
+    </div>
     <!-- ------------------------------------------- footer----- -->
     <footer id="contact-us">
       <div class="container">
@@ -377,7 +404,7 @@
                 </div>
                 <div class="phone">
                   <img src="phone-call_5585856.png" alt="" />
-                  <p>01005508969</p>
+                  <p style="color: #96510d">01005508969</p>
                 </div>
               </div>
             </div>
@@ -387,7 +414,10 @@
     </footer>
 
     <script src="portfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./js/all.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script></script>
   </body>
 </html>

@@ -1,17 +1,266 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Dancing+Script:wght@500&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Italianno&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Josefin Sans";
+    font-family: "Sour Gummy";
 }
 html{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 5px;
+   }
+   ::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 10px;
+   }
+   ::-webkit-scrollbar-track{
+    background-color: #123;
+   }
+/* body{
+    overflow: hidden;
+  
+} */
+.open{
+    height: 100vh;
+    background-color: rgb(5,3,76);
+    width: 100%;
+    z-index:3;
+    overflow: hidden;
+    
+}
+.open h1 {
+    font-size: 8rem;
+    font-family: "Italianno";
+    font-weight: bold;
+    position: relative;
+    color: transparent; 
+    /* -webkit-text-stroke: 0.01px rgb(23, 1, 103); */
+}
+
+.open h1::before {
+    content: 'Aya.Magdy';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white; 
+    -webkit-text-stroke: 0.01px orange;
+    border-right: 2px solid orange;
+    animation: fill 6s linear ;
+    overflow: hidden;
+}
+
+@keyframes fill {
+   0%,10% {
+        width: 0;
+    }
+    70%, 90%, 100%{
+        width: 100%;
+    }
+}
+.open button{
+    padding: 10px 20px 10px 20px;
+    background-color: orange;
+    color: #123;
+    animation: down 7s;
+    border-radius: 10px;
+
+    /* animation-delay: 4s; */
+
+
+}
+@keyframes down {
+    0%{
+        transform: translateY(600px); 
+           border-radius: 50%;
+    }
+100%{
+    transform: translateY(0px);
+    border-radius: 10px;
+}
+    
+}
+.open button:hover{
+    background-color: white;
+    border: 1 solid rgb(5,3,76);
+    color: rgb(5,3,76);
+}
+/* -------------------------------------------- */
+
+
+  
+  @keyframes firework {
+    0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
+    50% { width: 0.5vmin; opacity: 1; }
+    100% { width: var(--finalSize); opacity: 0; }
+  }
+  
+  /* @keyframes fireworkPseudo {
+    0% { transform: translate(-50%, -50%); width: var(--initialSize); opacity: 1; }
+    50% { width: 0.5vmin; opacity: 1; }
+    100% { width: var(--finalSize); opacity: 0; }
+  }
+   */
+  .firework,
+  .firework::before,
+  .firework::after
+  {
+    --initialSize: 0.5vmin;
+    --finalSize: 45vmin;
+    --particleSize: 0.2vmin;
+    --color1: yellow;
+    --color2: khaki;
+    --color3: white;
+    --color4: lime;
+    --color5: gold;
+    --color6: mediumseagreen;
+    --y: -30vmin;
+    --x: -50%;
+    --initialY: 60vmin;
+    content: "";
+    animation: firework 2s 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, var(--y));
+    width: var(--initialSize);
+    aspect-ratio: 1;
+    background: 
+      /*
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 0%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 0%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 100% 100%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 0% 100%,
+      */
+      
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 50% 0%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 50%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 50% 100%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 0% 50%,
+      
+      /* bottom right */
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 80% 90%,
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 95% 90%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 90% 70%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 100% 60%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 55% 80%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 70% 77%,
+      
+      /* bottom left */
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 22% 90%,
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 45% 90%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 70%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 10% 60%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 31% 80%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 28% 77%,
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 13% 72%,
+      
+      /* top left */
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 80% 10%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 95% 14%,
+      radial-gradient(circle, var(--color2) var(--particleSize), #0000 0) 90% 23%,
+      radial-gradient(circle, var(--color3) var(--particleSize), #0000 0) 100% 43%,
+      radial-gradient(circle, var(--color4) var(--particleSize), #0000 0) 85% 27%,
+      radial-gradient(circle, var(--color5) var(--particleSize), #0000 0) 77% 37%,
+      radial-gradient(circle, var(--color6) var(--particleSize), #0000 0) 60% 7%,
+      
+      /* top right */
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 22% 14%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 45% 20%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 33% 34%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 10% 29%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 31% 37%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 28% 7%,
+      radial-gradient(circle, var(--color1) var(--particleSize), #0000 0) 13% 42%
+      ;
+    background-size: var(--initialSize) var(--initialSize);
+    background-repeat: no-repeat;
+  }
+  
+  .firework::before {
+    --x: -50%;
+    --y: -50%;
+    --initialY: -50%;
+  /*   transform: translate(-20vmin, -2vmin) rotate(40deg) scale(1.3) rotateY(40deg); */
+    transform: translate(-50%, -50%) rotate(40deg) scale(1.3) rotateY(40deg);
+  /*   animation: fireworkPseudo 2s infinite; */
+  }
+  
+  .firework::after {
+    --x: -50%;
+    --y: -50%;
+    --initialY: -50%;
+  /*   transform: translate(44vmin, -50%) rotate(170deg) scale(1.15) rotateY(-30deg); */
+    transform: translate(-50%, -50%) rotate(170deg) scale(1.15) rotateY(-30deg);
+  /*   animation: fireworkPseudo 2s infinite; */
+  }
+  
+  .firework:nth-child(2) {
+    --x: 30vmin;
+  }
+  
+  .firework:nth-child(2),
+  .firework:nth-child(2)::before,
+  .firework:nth-child(2)::after {
+    --color1: pink;
+    --color2: violet;
+    --color3: fuchsia;
+    --color4: orchid;
+    --color5: plum;
+    --color6: lavender;  
+    --finalSize: 40vmin;
+    left: 30%;
+    top: 60%;
+    animation-delay: -0.25s;
+  }
+  
+  .firework:nth-child(3) {
+    --x: -30vmin;
+    --y: -50vmin;
+  }
+  
+  .firework:nth-child(3),
+  .firework:nth-child(3)::before,
+  .firework:nth-child(3)::after {
+    --color1: cyan;
+    --color2: lightcyan;
+    --color3: lightblue;
+    --color4: PaleTurquoise;
+    --color5: SkyBlue;
+    --color6: lavender;
+    --finalSize: 35vmin;
+    left: 70%;
+    top: 60%;
+    animation-delay: -0.4s;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------- */
 .main{
     width: 100%;
     height: 100vh;
-    background-color:  rgb(5,3,76);
+    /* background-color:  rgb(252, 247, 240); */
+    background-image: url('background.png');
 
     position: relative;
 }
@@ -79,7 +328,15 @@ h1 span{
 
 
 
-
+.topBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: orange;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 
 
 .container{
@@ -90,15 +347,19 @@ h1 span{
 }
 
 nav{
+
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* box-shadow: 0px 0.5px 5px rgb(210, 210, 210); */
+    /* box-shadow: 0px 1px 2px rgb(210, 210, 210); */
     padding: 10px 0 10px 0;
     margin-bottom: 1px;
     /* position: sticky; */
-    background-color: #fbf7f700;
-    position: absolute;
+    background-color:  rgb(252, 247, 240);
+
+    
+    z-index: 1;
+   
 }
 .container{
     /* box-shadow: 0px 0.5px 5px rgb(210, 210, 210); */
@@ -107,7 +368,7 @@ nav{
 nav span{
 font-size: 25px;
 font-weight: bold;
-color: #fff;
+color: #96510d;
 
 }
 nav ul{
@@ -118,21 +379,23 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     font-size: larger;
-    color: #fff;
+    color: #96510d;
     margin-left: 20px;
     padding: 20px 10px 10px 10px ;
     border-radius: 10px;
+    background-color: orange;
 
 }
 nav ul li .active{
-    background-color: orange;
+    background-color: #96510d;
+    color: #fff;
     
 
     
 }
-nav ul li .others{
-    background-color: orange;
-}
+/* nav ul li .others{
+    background-color: rgb(240, 172, 30);
+} */
 
 /* nav ul li .others:hover{
     background-color: pink;
@@ -146,7 +409,7 @@ nav ul li .others{
 .main-content{
     width: 100%;
     height: calc(100vh - 50px);
-    background-image: radial-gradient( rgb(5,3,76)90%, rgb(160, 187, 251) 10% );
+    /* background-image: radial-gradient( rgb(5,3,76)90%, rgb(160, 187, 251) 10% ); */
     position: absolute;
 }
 .main-content .introduction{
@@ -156,10 +419,10 @@ nav ul li .others{
     justify-content: center;
 
 }
-.main-content .introduction h1{
+.main-content .introduction h1 span{
     font-size: 45px;
     padding: 0 0 10px 0;
-    color: #fff;
+    color: #96510d;
     font-weight: bold;
 }
 .main-content .introduction p{
@@ -175,8 +438,11 @@ margin-top: 10px;
     margin-top: 20px;
     padding: 10px;
     font-weight: bold;
-    border-radius: 5px;
-    background-color: orange;
+    border-radius: 15px;
+    /* border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px; */
+    background-color: rgb(240, 172, 30);
+    border: none;
     color: white;
 }
 
@@ -186,6 +452,7 @@ margin-top: 10px;
     color: #442f5d;
 
 }
+
 .introduction button a:hover{
     color: #442f5d;
 }
@@ -195,90 +462,178 @@ margin-top: 10px;
 }
 
 .about{
-    background-color: rgb(5,3,76);
+    background-color:  rgb(252, 247, 240); 
 }
 .about h1, .about p{
-    color: white;
+    color: #96510d;
 }
-/* -------------------------------------------- skills-part */
+.mix{
+    /* background-color: #96510d; */
+    background-image: url('back.png');
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+    width: 90%;
+    margin-left: 60px;
+    /* border-top-right-radius: 60px;
+    border-bottom-left-radius:60px; */
+}
 
-.skills-part{
+
+.img-container{
+    
     width: 100%;
-    min-height: 80vh;
-    /* display: flex;
-    justify-content: center; */
-    background-color:  rgb(5,3,76);
-    padding: 30px 0;
+    height: 100%;
+    margin-left: 100px;
+    margin-top: -80px;
+
 }
-.skills-container{
+.img-container img{
     width: 100%;
     height: 100%;
     
-    background-color:  rgb(5,3,76);
-    gap:45px;
-    justify-content: center;
 }
+/* -------------------------------------------- skills-part */
+
+
+.skills{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    background-color:  rgb(252, 247, 240);
+    flex-direction: column;
+    /* padding: 30px 0; */
+}
+.skills-container{
+    width: 90%;
+    min-height: 80vh;
+    background-color:  rgb(252, 247, 240);
+    margin-left:60px;
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.div-container{
+    display: flex;
+    gap: 10px;
+    min-height:70vh;
+}
+.div-container .div-one{
+    width: 20%;
+   height: 30%;
+    border-radius: 20px;
+    border: 3px solid rgb(240, 172, 30);
+    border-top: none;
+    box-shadow: 1px 1px 3px #96510d;
+    background-color: #f3efef;
+    animation: swim 2s infinite;
+}
+.div-two{
+    width: 20%;
+    height: 30%;
+     border-radius: 20px;
+     border: 3px solid rgb(240, 172, 30);
+     border-top: none;
+     box-shadow: 1px 1px 3px #96510d;
+     background-color: #f3efef;
+    animation: up 2s infinite;
+}
+@keyframes swim {
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+@keyframes up {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.div-container .div-one:hover{
+    background-color: orange;
+}
+.div-one h2{
+    color: #96510d;
+}
+.div-one p{
+    color: #888585;
+    padding-left: 15px;
+
+}
+
+.line{
+
+    width: 10%;
+    height:9px;
+    border-radius: 70%;
+    background-color: #96510d;
+    /* margin-left: 20px; */
+    /* transform: translateX(200px); */
+    /* animation: big 7s; */
+    box-shadow: 2px 2px 7px rgb(98, 98, 98);
+}
+@keyframes big {
+    0%{
+transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(1250px);
+    }
+}
+
+
+
+
+
 #header-text{
     font-size: 45px;
-    color: #fff;
+    color: #96510d;
     margin-bottom: 20px;
     padding-bottom: 5px;
     border-bottom: 1px solid black;
 }
-.skills-container .div-one{
-    background-color:  rgb(5,3,76);
-    margin-top: 2%;
-    box-shadow: 1px 1px 5px orange;
-    padding: 10px;
-    transition: 0.3s;
+/* --------------------- */
 
-}
-.skills-container .div-one:hover{
-    background-color: orange;
-}
-.div-one-img{
+
+
+
+/* .div-one-img{
     width: 20%;
     height: 25%;
     margin: auto;
     margin-top: 4%;
-}
-.div-one-img img{
+} */
+/* .div-one-img img{
     width: 100%;
     height: 100%;
-}
-.div-one-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 4%;
-    
+} */
 
-
-}
-.div-one-content p{
-    padding: 10px;
-    margin-left: 6%;
-    color: #fff;
-
-}
-.div-one-content h1{
-    color: #fff;
-}
 
 /* --------------------------------------------------- projects-part */
 .projects-part{
     width: 100%;
     min-height: 70vh;
     
-    background-color:  rgb(5,3,76);
-}
+    background-color:  rgb(252, 247, 240);}
 
 .projects-div{
     width: 100%;
     min-height: 60vh;
    
-    background-color:  rgb(5,3,76);
+    background-color:  rgb(252, 247, 240); 
     gap: 20px;
     margin-bottom: 3%;
 
@@ -287,7 +642,7 @@ margin-top: 10px;
 
 .projects-div-one{
     height: 55vh;
-    background-color:  rgb(5,3,76);
+    /* background-color:  #d8a778; */
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -335,13 +690,15 @@ transition: 0.3s;
 /* --------------------------------------------------- footer */
 footer{
        width: 100%;
-    background-color:  rgb(5,3,76);
+    background-color:  #7a5937;
+    background-image: url('back.png');
+    background-size: cover;
     padding: 30px 20px 30px 20px;
 }
 .foot-content{
     width: 100%;
     
-    background-color:  rgb(5,3,76);
+    /* background-color:  #7a5937; */
 }
 .foot-content .contact{
     display: flex;
@@ -360,7 +717,7 @@ gap: 30px;
     align-items: center;
     gap: 10px;
     margin: 10px 0 0 0;
-    background-color: rgb(37, 31, 73);
+    background-color: rgb(252, 247, 240); 
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 1px orange ;
@@ -370,13 +727,13 @@ gap: 30px;
     height: 30px;
 }
 .foot-content .contact div a{
-    color: white;
+    color: #96510d;
     text-decoration: none;
 }
 .content span{
-    color: rgba(77, 199, 244, 0.63);
+    color: orange;
     text-shadow: 0.5px 0.5px 1px rgb(216, 214, 214);
 }
 .offcanvas-body, .offcanvas-header{
-    background-color: rgb(5,3,76);
+    background-color:  rgb(252, 247, 240);
 }
